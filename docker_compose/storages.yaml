@@ -1,11 +1,11 @@
-version: '3.10'
+version: '3.9'
 
 services:
   postgres:
     image: postgres:latest
     container_name: example-db
     ports:
-      - "${POSTGRES}:5432"
+      - "${POSTGRES_PORT}:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     env_file:
